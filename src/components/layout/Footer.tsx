@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={20} className="text-primary-400" />
-                <p>contact@High Value.com</p>
+                <p>contact@High value Recruitment Agency.com</p>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center">
           <div className="text-neutral-500 mb-4 md:mb-0">
-            &copy; {currentYear} High Value. All rights reserved.
+            &copy; {currentYear} High value Recruitment Agency. All rights reserved.
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-500">
             <FooterLink to="/terms">Terms of Service</FooterLink>
