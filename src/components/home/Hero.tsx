@@ -28,7 +28,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Find Your Dream Career With <span className="text-secondary-400">High value</span>
+              Find Your Dream Career With <span className="text-red-900">High value </span> 
+              Recruitment Agency
             </h1>
             <p className="text-xl md:text-2xl text-neutral-200 mb-8">
               Connecting exceptional talent with world-class companies.

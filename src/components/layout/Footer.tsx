@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
-import sha from './../sha.jpg'
+import sha from './sha.png'
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-neutral-900 text-white pt-16 pb-8">
+    <footer className="bg-neutral-900 text-white pt-12 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-                        <img src={sha} alt="" className='size-4' />
-              <span className="text-xl font-bold">High Value</span>
+                        <img src={sha} alt="" className='size-32' />
+            
             </div>
             <p className="text-neutral-400 mb-6">
               Connecting exceptional talent with leading companies worldwide. Your career journey starts here.

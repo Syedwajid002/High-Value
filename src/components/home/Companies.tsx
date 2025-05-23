@@ -15,7 +15,7 @@ const Companies: React.FC = () => {
     <section className="py-16 bg-neutral-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3">Trusted by Leading Companies</h2>
+          <h2 className="text-3xl font-bold mb-3 text-[#902537]">Trusted by Leading Companies</h2>
           <p className="text-neutral-600 max-w-2xl mx-auto">
             We partner with top employers worldwide to bring you exclusive opportunities
           </p>

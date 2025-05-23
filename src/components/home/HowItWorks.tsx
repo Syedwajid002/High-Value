@@ -30,7 +30,7 @@ const HowItWorks: React.FC = () => {
     <section className="section bg-gradient-to-br from-primary-50 to-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How High value Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#902537]">How High value Works</h2>
           <p className="text-neutral-600 text-lg">
             Our streamlined process helps you find and land your dream job with ease
           </p>

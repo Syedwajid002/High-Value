@@ -20,7 +20,7 @@ interface Job {
 const featuredJobs: Job[] = [
   {
     id: '1',
-    title: 'Senior Frontend Developer',
+    title: 'Job Title 1',
     company: 'TechCorp',
     logo: 'https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'San Francisco, CA',
@@ -31,7 +31,7 @@ const featuredJobs: Job[] = [
   },
   {
     id: '2',
-    title: 'Product Manager',
+    title: 'Job Title 2',
     company: 'InnovateX',
     logo: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Remote',
@@ -42,7 +42,7 @@ const featuredJobs: Job[] = [
   },
   {
     id: '3',
-    title: 'UX/UI Designer',
+    title: 'Job title 3',
     company: 'DesignHub',
     logo: 'https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'New York, NY',
@@ -52,7 +52,7 @@ const featuredJobs: Job[] = [
   },
   {
     id: '4',
-    title: 'DevOps Engineer',
+    title: 'Job Title 4',
     company: 'CloudSolutions',
     logo: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Austin, TX',
@@ -87,7 +87,7 @@ const FeaturedJobs: React.FC = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div>
-            <h2 className="text-3xl font-bold mb-2">Featured Jobs</h2>
+            <h2 className="text-3xl font-bold mb-2 text-[#902537]">Featured Jobs</h2>
             <p className="text-neutral-600">Discover your next career opportunity</p>
           </div>
           <Link 

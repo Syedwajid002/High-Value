@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
-import sha from './../sha.jpg'
+import sha from './sha.png'
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -39,8 +39,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={sha} alt="" className='size-4' />
-          <span className="text-xl font-bold tracking-tight">High value</span>
+          <img src={sha} alt="" className='size-24' />
         </Link>
         
         {/* Desktop Navigation */}
@@ -69,7 +68,7 @@ const Header: React.FC = () => {
             <Search size={20} />
           </button>
           <Link to="/jobs" className="btn btn-outline">Find Jobs</Link>
-          <Link to="/employers" className="btn btn-primary">Post a Job</Link>
+          <Link to="/employers" className="btn btn-primary ">Post a Job</Link>
         </div>
         
         {/* Mobile menu button */}
