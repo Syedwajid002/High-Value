@@ -32,7 +32,7 @@ const resources = [
 
 const testimonials = [
   {
-    quote: "High value Recruitment Agency helped me find a role that perfectly matched my skills and aspirations. I received multiple job offers within two weeks!",
+    quote: "High Value Recruitment Agency helped me find a role that perfectly matched my skills and aspirations. I received multiple job offers within two weeks!",
     name: "Sarah Johnson",
     position: "Software Engineer",
     company: "TechCorp",
@@ -65,7 +65,7 @@ const Candidates: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Find Your Dream Career <span className="text-secondary-400">Today</span>
+                Find Your Dream Career <span className="text-red-900">Today</span>
               </h1>
               <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
                 Browse thousands of job opportunities and connect with top employers. Your perfect job match is just a search away.
@@ -254,7 +254,7 @@ const Candidates: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
             <p className="text-neutral-600 text-lg">
-              Hear from professionals who found their dream jobs through High value Recruitment Agency
+              Hear from professionals who found their dream jobs through High Value Recruitment Agency
             </p>
           </div>
           

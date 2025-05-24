@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: 'Jennifer Reynolds',
     position: 'CEO & Founder',
-    bio: 'With over 15 years in recruitment and HR tech, Jennifer founded High value Recruitment Agency to transform how companies find talent.',
+    bio: 'With over 15 years in recruitment and HR tech, Jennifer founded High Value Recruitment Agency to transform how companies find talent.',
     avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=120',
   },
   {
@@ -26,7 +26,7 @@ const teamMembers = [
   {
     name: 'David Rodriguez',
     position: 'Director of Marketing',
-    bio: 'David develops our marketing strategies, ensuring High value Recruitment Agency reaches both job seekers and employers effectively.',
+    bio: 'David develops our marketing strategies, ensuring High Value Recruitment Agency reaches both job seekers and employers effectively.',
     avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=120',
   },
 ];
@@ -73,7 +73,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                About <span className="text-secondary-400">High value Recruitment Agency</span>
+                About <span className="text-red-700">High Value Recruitment Agency</span>
               </h1>
               <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
                 We're on a mission to transform how companies find talent and how professionals discover opportunities. Our platform connects exceptional candidates with forward-thinking employers.
@@ -95,13 +95,13 @@ const About: React.FC = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-neutral-700 mb-4 leading-relaxed">
-                High value Recruitment Agency was founded in 2020 with a simple yet powerful vision: to create a recruitment platform that truly understands the needs of both employers and job seekers.
+                High Value Recruitment Agency was founded in 2020 with a simple yet powerful vision: to create a recruitment platform that truly understands the needs of both employers and job seekers.
               </p>
               <p className="text-neutral-700 mb-4 leading-relaxed">
                 After years of working in traditional recruitment, our founder Jennifer Reynolds recognized the inefficiencies and disconnects in the hiring process. She assembled a team of industry experts and technology innovators to build a solution that would transform the recruitment landscape.
               </p>
               <p className="text-neutral-700 leading-relaxed">
-                Today, High value Recruitment Agency has grown to serve thousands of companies and millions of job seekers worldwide, leveraging advanced technology to create meaningful connections between talent and opportunity.
+                Today, High Value Recruitment Agency has grown to serve thousands of companies and millions of job seekers worldwide, leveraging advanced technology to create meaningful connections between talent and opportunity.
               </p>
             </motion.div>
             
@@ -132,7 +132,7 @@ const About: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
             <p className="text-neutral-600 text-lg">
-              The principles that guide everything we do at High value Recruitment Agency
+              The principles that guide everything we do at High Value Recruitment Agency
             </p>
           </div>
           
@@ -156,7 +156,7 @@ const About: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
             <p className="text-neutral-600 text-lg">
-              Meet the experts behind High value Recruitment Agency who are passionate about connecting talent with opportunity
+              Meet the experts behind High Value Recruitment Agency who are passionate about connecting talent with opportunity
             </p>
           </div>
           
@@ -231,7 +231,7 @@ const About: React.FC = () => {
               <div className="p-8 md:p-12">
                 <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
                 <p className="text-neutral-600 mb-8">
-                  Have questions about High value Recruitment Agency? We'd love to hear from you. Reach out to our team using the contact information below.
+                  Have questions about High Value Recruitment Agency? We'd love to hear from you. Reach out to our team using the contact information below.
                 </p>
                 
                 <div className="space-y-4">
@@ -251,7 +251,7 @@ const About: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email Us</h3>
-                      <p className="text-neutral-600">contact@High value Recruitment Agency.com</p>
+                      <p className="text-neutral-600">contact@High Value Recruitment Agency.com</p>
                     </div>
                   </div>
                   

@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Email Us</h3>
-                        <p className="text-white/80">contact@High value Recruitment Agency.com</p>
+                        <p className="text-white/80">contact@High Value Recruitment Agency.com</p>
                       </div>
                     </div>
                     
@@ -320,7 +320,7 @@ const Contact: React.FC = () => {
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"
-              title="High value Recruitment Agency Office Location"
+              title="High Value Recruitment Agency Office Location"
             ></iframe>
           </div>
         </div>
@@ -338,7 +338,7 @@ const Contact: React.FC = () => {
           
           <div className="max-w-3xl mx-auto space-y-6">
             <FaqItem 
-              question="How can I post a job on High value Recruitment Agency?"
+              question="How can I post a job on High Value Recruitment Agency?"
               answer="To post a job, you'll need to create an employer account. Once registered, you can click on 'Post a Job' from your dashboard and follow the prompts to create your job listing."
               index={0}
             />
@@ -368,7 +368,7 @@ const Contact: React.FC = () => {
             <p className="text-neutral-600 mb-4">
               Still have questions? We're here to help.
             </p>
-            <a href="mailto:support@High value Recruitment Agency.com" className="text-primary-500 font-medium hover:underline">
+            <a href="mailto:support@High Value Recruitment Agency.com" className="text-primary-500 font-medium hover:underline">
               Contact our support team
             </a>
           </div>

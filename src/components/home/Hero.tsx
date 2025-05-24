@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary-700 via-primary-800 to-primary-700 text-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-primary-500 opacity-10"></div>
@@ -27,9 +27,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Find Your Dream Career With <span className="text-red-900">High value </span> 
-              Recruitment Agency
+            <h1 className="text-4xl md:text-3xl lg:text-6xl font-bold mb-6 text-gray-400">
+              Find Your Dream Career With <span className="text-white">High Value Recruitment Agency </span> 
+              
             </h1>
             <p className="text-xl md:text-2xl text-neutral-200 mb-8">
               Connecting exceptional talent with world-class companies.

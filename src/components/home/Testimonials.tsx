@@ -8,21 +8,21 @@ const testimonials = [
     name: 'Sarah Johnson',
     position: 'Senior Developer at TechCorp',
     avatar: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=120',
-    quote: 'High value Recruitment Agency helped me find a role that perfectly matched my skills and career aspirations. The process was smooth, and I was able to connect with top companies in my industry.',
+    quote: 'High Value Recruitment Agency helped me find a role that perfectly matched my skills and career aspirations. The process was smooth, and I was able to connect with top companies in my industry.',
   },
   {
     id: 2,
     name: 'Michael Rodriguez',
     position: 'Product Manager at InnovateX',
     avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=120',
-    quote: 'After months of searching on other platforms, I found my dream job through High value Recruitment Agency within weeks. Their personalized approach and quality job listings made all the difference.',
+    quote: 'After months of searching on other platforms, I found my dream job through High Value Recruitment Agency within weeks. Their personalized approach and quality job listings made all the difference.',
   },
   {
     id: 3,
     name: 'Emma Chang',
     position: 'UX Designer at DesignHub',
     avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=120',
-    quote: 'As someone transitioning to a new career field, High value Recruitment Agency provided invaluable resources and connections. Their platform is intuitive and the support team was incredibly helpful.',
+    quote: 'As someone transitioning to a new career field, High Value Recruitment Agency provided invaluable resources and connections. Their platform is intuitive and the support team was incredibly helpful.',
   },
 ];
 
@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-800">Success Stories</h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Hear from professionals who found their perfect career match with High value Recruitment Agency
+              Hear from professionals who found their perfect career match with High Value Recruitment Agency
             </p>
           </div>
           

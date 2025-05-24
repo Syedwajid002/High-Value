@@ -140,7 +140,7 @@ const Employers: React.FC = () => {
       <section className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose High value Recruitment Agency</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose High Value Recruitment Agency</h2>
             <p className="text-neutral-600 text-lg">
               Our comprehensive recruiting platform helps you streamline your hiring process and find the perfect candidates faster
             </p>
@@ -211,7 +211,7 @@ const Employers: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Find Your Next Great Hire?</h2>
             <p className="text-xl text-white/90 mb-8">
-              Join thousands of companies that trust High value Recruitment Agency to connect them with exceptional talent.
+              Join thousands of companies that trust High Value Recruitment Agency to connect them with exceptional talent.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/employers/post-job" className="btn bg-white text-primary-600 hover:bg-neutral-100">
