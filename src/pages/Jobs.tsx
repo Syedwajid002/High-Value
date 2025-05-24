@@ -146,19 +146,19 @@ const Jobs: React.FC = () => {
   });
   
   const toggleJobType = (type: string) => {
-    if (selectedType.includes(type)) {
-      setSelectedType(selectedType.filter(t => t !== type));
-    } else {
-      setSelectedType([...selectedType, type]);
-    }
+    // if (selectedType.includes(type)) {
+    //   setSelectedType(selectedType.filter(t => t !== type));
+    // } else {
+    //   setSelectedType([...selectedType, type]);
+    // }
   };
   
   const toggleCategory = (category: string) => {
-    if (selectedCategories.includes(category)) {
-      setSelectedCategories(selectedCategories.filter(c => c !== category));
-    } else {
-      setSelectedCategories([...selectedCategories, category]);
-    }
+    // if (selectedCategories.includes(category)) {
+    //   setSelectedCategories(selectedCategories.filter(c => c !== category));
+    // } else {
+    //   setSelectedCategories([...selectedCategories, category]);
+    // }
   };
   
   const clearFilters = () => {
