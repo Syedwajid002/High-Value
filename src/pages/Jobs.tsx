@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 const allJobs = [
   {
     id: '1',
-    title: 'Senior Frontend Developer',
-    company: 'TechCorp',
+    title: 'Chief Human Resources Officer',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'San Francisco, CA',
     salary: '$120,000 - $150,000',
@@ -16,12 +16,12 @@ const allJobs = [
     category: 'tech',
     postedDate: '2 days ago',
     featured: true,
-    description: 'We are looking for an experienced Frontend Developer to join our team...'
+    description: 'We are looking for an experienced Chief Human Resources Officer to join our team...'
   },
   {
     id: '2',
     title: 'Product Manager',
-    company: 'InnovateX',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Remote',
     salary: '$110,000 - $135,000',
@@ -34,7 +34,7 @@ const allJobs = [
   {
     id: '3',
     title: 'UX/UI Designer',
-    company: 'DesignHub',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'New York, NY',
     salary: '$95,000 - $120,000',
@@ -45,20 +45,20 @@ const allJobs = [
   },
   {
     id: '4',
-    title: 'DevOps Engineer',
-    company: 'CloudSolutions',
+    title: 'Talent Acquisition Heads (Zonal/State)',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Austin, TX',
     salary: '$130,000 - $160,000',
     type: 'Full-time',
     category: 'tech',
     postedDate: '5 days ago',
-    description: 'We need a skilled DevOps Engineer to improve our infrastructure and deployment...'
+    description: 'We need a skilled Talent Acquisition Heads (Zonal/State) to improve our infrastructure...'
   },
   {
     id: '5',
     title: 'Financial Analyst',
-    company: 'CapitalGroup',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/936137/pexels-photo-936137.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Chicago, IL',
     salary: '$85,000 - $105,000',
@@ -70,7 +70,7 @@ const allJobs = [
   {
     id: '6',
     title: 'Marketing Specialist',
-    company: 'GrowthLabs',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Remote',
     salary: '$70,000 - $90,000',
@@ -81,8 +81,8 @@ const allJobs = [
   },
   {
     id: '7',
-    title: 'Registered Nurse',
-    company: 'HealthPoint',
+    title: 'Performance Review Managers',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Boston, MA',
     salary: '$75,000 - $95,000',
@@ -93,8 +93,8 @@ const allJobs = [
   },
   {
     id: '8',
-    title: 'Data Scientist',
-    company: 'AnalyticsPro',
+    title: 'HR Policy Compliance Officers',
+    company: 'Amrown',
     logo: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=120',
     location: 'Seattle, WA',
     salary: '$125,000 - $155,000',
@@ -102,7 +102,7 @@ const allJobs = [
     category: 'tech',
     postedDate: '2 days ago',
     featured: true,
-    description: 'We\'re seeking a talented Data Scientist to analyze complex datasets...'
+    description: 'We\'re seeking a talented HR Policy Compliance Officers to analyze complex Policies...'
   }
 ];
 
@@ -114,7 +114,7 @@ const Jobs: React.FC = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const categoryParam = queryParams.get('category');
-  
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedType, setSelectedType] = useState<string[]>([]);
@@ -122,29 +122,29 @@ const Jobs: React.FC = () => {
     categoryParam ? [categoryParam] : []
   );
   const [showFilters, setShowFilters] = useState(false);
-  
+
   // Filter jobs based on search criteria
   const filteredJobs = allJobs.filter(job => {
     // Search query filter
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === '' ||
       job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       job.company.toLowerCase().includes(searchQuery.toLowerCase());
-    
+
     // Location filter
-    const matchesLocation = selectedLocation === '' || 
+    const matchesLocation = selectedLocation === '' ||
       job.location.toLowerCase().includes(selectedLocation.toLowerCase());
-    
+
     // Job type filter
-    const matchesType = selectedType.length === 0 || 
+    const matchesType = selectedType.length === 0 ||
       selectedType.some(type => job.type.toLowerCase() === type.toLowerCase());
-    
+
     // Category filter
-    const matchesCategory = selectedCategories.length === 0 || 
+    const matchesCategory = selectedCategories.length === 0 ||
       selectedCategories.some(category => job.category.toLowerCase() === category.toLowerCase());
-    
+
     return matchesSearch && matchesLocation && matchesType && matchesCategory;
   });
-  
+
   const toggleJobType = (type: string) => {
     // if (selectedType.includes(type)) {
     //   setSelectedType(selectedType.filter(t => t !== type));
@@ -152,7 +152,7 @@ const Jobs: React.FC = () => {
     //   setSelectedType([...selectedType, type]);
     // }
   };
-  
+
   const toggleCategory = (category: string) => {
     // if (selectedCategories.includes(category)) {
     //   setSelectedCategories(selectedCategories.filter(c => c !== category));
@@ -160,7 +160,7 @@ const Jobs: React.FC = () => {
     //   setSelectedCategories([...selectedCategories, category]);
     // }
   };
-  
+
   const clearFilters = () => {
     setSearchQuery('');
     setSelectedLocation('');
@@ -177,7 +177,7 @@ const Jobs: React.FC = () => {
             <p className="text-lg text-neutral-200 mb-8">
               Browse through thousands of full-time and part-time jobs near you
             </p>
-            
+
             <div className="bg-white rounded-xl shadow-xl p-1.5">
               <div className="flex flex-col md:flex-row">
                 <div className="flex-grow p-2 flex items-center">
@@ -210,13 +210,14 @@ const Jobs: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="container mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">
-            {filteredJobs.length} Jobs Available
+            {/* {filteredJobs.length} Jobs Available */}
+            5000+ Jobs Available
           </h2>
-          <button 
+          <button
             onClick={() => setShowFilters(!showFilters)}
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-neutral-50 md:hidden"
           >
@@ -225,16 +226,15 @@ const Jobs: React.FC = () => {
             <ChevronDown size={16} className={`transition-transform ${showFilters ? 'rotate-180' : ''}`} />
           </button>
         </div>
-        
+
         <div className="flex flex-col md:flex-row gap-8">
           {/* Filters Sidebar */}
-          <div className={`w-full md:w-1/4 bg-white rounded-xl shadow-sm p-6 mb-6 md:mb-0 md:sticky md:top-24 md:h-fit transition-all duration-300 ${
-            showFilters ? 'block' : 'hidden md:block'
-          }`}>
+          <div className={`w-full md:w-1/4 bg-white rounded-xl shadow-sm p-6 mb-6 md:mb-0 md:sticky md:top-24 md:h-fit transition-all duration-300 ${showFilters ? 'block' : 'hidden md:block'
+            }`}>
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold">Filters</h3>
               {(selectedType.length > 0 || selectedCategories.length > 0 || selectedLocation) && (
-                <button 
+                <button
                   onClick={clearFilters}
                   className="text-primary-500 text-sm font-medium hover:underline"
                 >
@@ -242,7 +242,7 @@ const Jobs: React.FC = () => {
                 </button>
               )}
             </div>
-            
+
             {/* Job Type Filter */}
             <div className="mb-6">
               <h4 className="font-medium mb-3">Job Type</h4>
@@ -260,7 +260,7 @@ const Jobs: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             {/* Experience Level Filter */}
             <div className="mb-6">
               <h4 className="font-medium mb-3">Experience Level</h4>
@@ -276,7 +276,7 @@ const Jobs: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             {/* Categories Filter */}
             <div className="mb-6">
               <h4 className="font-medium mb-3">Categories</h4>
@@ -294,7 +294,7 @@ const Jobs: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             {/* Salary Range */}
             <div>
               <h4 className="font-medium mb-3">Salary Range</h4>
@@ -311,13 +311,13 @@ const Jobs: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Job Listings */}
           <div className="w-full md:w-3/4">
             {selectedType.length > 0 || selectedCategories.length > 0 || selectedLocation || searchQuery ? (
               <div className="bg-white rounded-lg p-4 mb-6 flex flex-wrap gap-2 items-center">
                 <span className="text-neutral-700 font-medium">Active Filters:</span>
-                
+
                 {searchQuery && (
                   <div className="flex items-center bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm">
                     Search: {searchQuery}
@@ -326,7 +326,7 @@ const Jobs: React.FC = () => {
                     </button>
                   </div>
                 )}
-                
+
                 {selectedLocation && (
                   <div className="flex items-center bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm">
                     Location: {selectedLocation}
@@ -335,7 +335,7 @@ const Jobs: React.FC = () => {
                     </button>
                   </div>
                 )}
-                
+
                 {selectedType.map(type => (
                   <div key={type} className="flex items-center bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm">
                     {type}
@@ -344,7 +344,7 @@ const Jobs: React.FC = () => {
                     </button>
                   </div>
                 ))}
-                
+
                 {selectedCategories.map(category => (
                   <div key={category} className="flex items-center bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm capitalize">
                     {category}
@@ -355,19 +355,19 @@ const Jobs: React.FC = () => {
                 ))}
               </div>
             ) : null}
-            
+
             {filteredJobs.length === 0 ? (
               <div className="bg-white rounded-xl shadow-sm p-8 text-center">
-                <img 
-                  src="https://images.pexels.com/photos/7516509/pexels-photo-7516509.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                  alt="No jobs found" 
+                <img
+                  src="https://images.pexels.com/photos/7516509/pexels-photo-7516509.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="No jobs found"
                   className="w-64 h-64 object-cover mx-auto mb-6 rounded-lg opacity-75"
                 />
                 <h3 className="text-xl font-semibold mb-2">No jobs found</h3>
                 <p className="text-neutral-600 mb-6">
                   We couldn't find any jobs matching your search criteria. Try adjusting your filters.
                 </p>
-                <button 
+                <button
                   onClick={clearFilters}
                   className="btn btn-primary"
                 >
@@ -375,7 +375,7 @@ const Jobs: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <motion.div 
+              <motion.div
                 className="space-y-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -408,9 +408,9 @@ const JobCard: React.FC<JobCardProps> = ({ job, index }) => {
       <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6">
         <div className="flex flex-col md:flex-row md:items-center">
           <div className="flex items-start mb-4 md:mb-0">
-            <img 
-              src={job.logo} 
-              alt={`${job.company} logo`} 
+            <img
+              src={job.logo}
+              alt={`${job.company} logo`}
               className="w-16 h-16 object-cover rounded-lg mr-4"
             />
             <div>
@@ -439,7 +439,7 @@ const JobCard: React.FC<JobCardProps> = ({ job, index }) => {
               </div>
             </div>
           </div>
-          
+
           <div className="md:ml-auto flex flex-col md:flex-row gap-3 items-center">
             <span className="text-sm text-neutral-500">{job.postedDate}</span>
             <button className="w-full md:w-auto px-5 py-2 bg-primary-50 text-primary-600 font-medium rounded-lg hover:bg-primary-100 transition-colors">
@@ -447,7 +447,7 @@ const JobCard: React.FC<JobCardProps> = ({ job, index }) => {
             </button>
           </div>
         </div>
-        
+
         <div className="mt-4 border-t border-neutral-100 pt-4">
           <p className="text-neutral-600 line-clamp-2">{job.description}</p>
         </div>

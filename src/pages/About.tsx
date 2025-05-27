@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 // Team data
 const teamMembers = [
   {
-    name: 'Jennifer Reynolds',
+    name: 'Mohd Muneer',
     position: 'CEO & Founder',
     bio: 'With over 15 years in recruitment and HR tech, Jennifer founded High Value Recruitment Agency to transform how companies find talent.',
-    avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=120',
+    avatar: 'https://pbs.twimg.com/profile_images/1631766593578631169/k3W6R53P_400x400.jpg',
   },
   {
     name: 'Michael Chen',
@@ -35,23 +35,23 @@ const teamMembers = [
 const values = [
   {
     icon: <Users size={28} />,
-    title: 'People First',
-    description: 'We believe in putting people at the center of everything we do, focusing on creating meaningful connections between talent and opportunity.'
+    title: 'Exclusive Access',
+    description: 'Jobs listed with us are only available through our agency.'
   },
   {
     icon: <Award size={28} />,
-    title: 'Excellence',
-    description: 'We strive for excellence in our platform, our service, and our relationships with clients and candidates.'
+    title: 'Scale with Quality',
+    description: 'We operate with advanced AI-powered screening, ensuring precision at scale.'
   },
   {
     icon: <Target size={28} />,
-    title: 'Innovation',
-    description: 'We continuously evolve our technology and approach to better serve the changing needs of the job market.'
+    title: 'Trusted by Visionaries',
+    description: 'Amrown chose us for our integrity, delivery speed, and global hiring systems.'
   },
   {
     icon: <Clock size={28} />,
-    title: 'Efficiency',
-    description: 'We value efficiency in our processes and in the hiring solutions we provide to our clients.'
+    title: 'Local & National Reach',
+    description: '200+ regional offices across India with recruitment support in over 25 languages.'
   },
 ];
 
@@ -64,7 +64,7 @@ const About: React.FC = () => {
           <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-primary-500 opacity-10"></div>
           <div className="absolute -left-32 -bottom-32 w-[30rem] h-[30rem] rounded-full bg-secondary-500 opacity-10"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <motion.div
@@ -73,16 +73,20 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                About <span className="text-red-700">High Value Recruitment Agency</span>
+                <span className="text-red-700">Who We Are
+                </span>
               </h1>
               <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
-                We're on a mission to transform how companies find talent and how professionals discover opportunities. Our platform connects exceptional candidates with forward-thinking employers.
+                We are a high-value recruitment agency dedicated to delivering top-tier talent at extraordinary scale. Backed by a deep commitment to precision hiring and workforce transformation, our agency is proudly contracted to recruit 500,000 employees exclusively for Amrown, a global disruptor in technology, digital infrastructure, and human-centric innovation.
+
+                Our mission is to redefine employment by aligning the right people with the right roles—across 200+ cities in India—within a framework of integrity, growth, and impact.
+
               </p>
             </motion.div>
           </div>
         </div>
       </section>
-      
+
       {/* Our Story */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -93,18 +97,20 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">🤝 Our Strategic Alliance with Amrown</h2>
               <p className="text-neutral-700 mb-4 leading-relaxed">
-                High Value Recruitment Agency was founded in 2020 with a simple yet powerful vision: to create a recruitment platform that truly understands the needs of both employers and job seekers.
+                In 2025, we signed an exclusive Memorandum of Understanding (MoU) with Amrown, a pioneering tech-driven startup poised to revolutionize industries across 80+ nations. Under this historic partnership:
+                <ul>
+                  <li>We will hire 500,000 employees for Amrown across India.</li>
+                  <li>Recruitment spans multiple verticals: technology, support, logistics, finance, operations, design, HR, and more.</li>
+                  <li>All placements are dedicated solely to Amrown’s ecosystem — making us their exclusive workforce partner.</li>
+                </ul>
+
+                <span>This collaboration marks one of the largest private recruitment initiatives in Indian history.</span>
               </p>
-              <p className="text-neutral-700 mb-4 leading-relaxed">
-                After years of working in traditional recruitment, our founder Jennifer Reynolds recognized the inefficiencies and disconnects in the hiring process. She assembled a team of industry experts and technology innovators to build a solution that would transform the recruitment landscape.
-              </p>
-              <p className="text-neutral-700 leading-relaxed">
-                Today, High Value Recruitment Agency has grown to serve thousands of companies and millions of job seekers worldwide, leveraging advanced technology to create meaningful connections between talent and opportunity.
-              </p>
+
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -112,33 +118,34 @@ const About: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <img 
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Team collaboration" 
+              <img
+                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Team collaboration"
                 className="rounded-lg shadow-lg"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary-500 text-white p-4 rounded-lg shadow-lg">
+              {/* <div className="absolute -bottom-6 -left-6 bg-primary-500 text-white p-4 rounded-lg shadow-lg">
                 <div className="text-3xl font-bold">5+</div>
                 <div className="text-sm">Years of Excellence</div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
       </section>
-      
+
       {/* Our Values */}
       <section className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">📈 What Makes Us Different
+            </h2>
             <p className="text-neutral-600 text-lg">
               The principles that guide everything we do at High Value Recruitment Agency
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <ValueCard 
+              <ValueCard
                 key={index}
                 icon={value.icon}
                 title={value.title}
@@ -149,7 +156,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Our Team */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -159,10 +166,10 @@ const About: React.FC = () => {
               Meet the experts behind High Value Recruitment Agency who are passionate about connecting talent with opportunity
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <TeamMemberCard 
+              <TeamMemberCard
                 key={index}
                 member={member}
                 index={index}
@@ -171,7 +178,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Stats */}
       <section className="py-20 bg-gradient-to-br from-primary-600 to-primary-700 text-white">
         <div className="container mx-auto px-4">
@@ -186,7 +193,7 @@ const About: React.FC = () => {
               <div className="text-4xl font-bold mb-2">8M+</div>
               <p>Registered Professionals</p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -197,7 +204,7 @@ const About: React.FC = () => {
               <div className="text-4xl font-bold mb-2">10K+</div>
               <p>Partner Companies</p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -208,7 +215,7 @@ const About: React.FC = () => {
               <div className="text-4xl font-bold mb-2">150K+</div>
               <p>Jobs Filled</p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -222,7 +229,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Contact */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -233,7 +240,7 @@ const About: React.FC = () => {
                 <p className="text-neutral-600 mb-8">
                   Have questions about High Value Recruitment Agency? We'd love to hear from you. Reach out to our team using the contact information below.
                 </p>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center mr-4">
@@ -244,7 +251,7 @@ const About: React.FC = () => {
                       <p className="text-neutral-600">11-24-786 Nakkalgutta HNK</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center mr-4">
                       <Mail size={20} className="text-primary-500" />
@@ -254,7 +261,7 @@ const About: React.FC = () => {
                       <p className="text-neutral-600">contact@High Value Recruitment Agency.com</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center mr-4">
                       <Phone size={20} className="text-primary-500" />
@@ -265,20 +272,20 @@ const About: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mt-8">
                   <Link to="/contact" className="btn btn-primary">
                     Contact Us
                   </Link>
                 </div>
               </div>
-              
+
               <div className="bg-gradient-to-br from-primary-600 to-primary-700 p-8 md:p-12 text-white">
                 <h3 className="text-2xl font-bold mb-6">Join Our Team</h3>
                 <p className="mb-6">
                   We're always looking for talented individuals who are passionate about connecting people with opportunities. Explore our open positions and become part of our mission.
                 </p>
-                
+
                 <h4 className="font-semibold mb-3">Why Work With Us:</h4>
                 <ul className="space-y-2 mb-8">
                   <li className="flex items-center">
@@ -306,7 +313,7 @@ const About: React.FC = () => {
                     <span>Make a meaningful impact on people's careers</span>
                   </li>
                 </ul>
-                
+
                 <Link to="/careers" className="btn bg-white text-primary-600 hover:bg-neutral-100">
                   View Open Positions
                 </Link>
@@ -364,9 +371,9 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="bg-white rounded-xl shadow-sm overflow-hidden h-full">
-        <img 
-          src={member.avatar} 
-          alt={member.name} 
+        <img
+          src={member.avatar}
+          alt={member.name}
           className="w-full h-48 object-cover"
         />
         <div className="p-6">

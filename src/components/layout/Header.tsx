@@ -4,44 +4,40 @@ import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import sha from './sha.png'
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  
+
   useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 80) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    // const handleScroll = () => {
+    //   const offset = window.scrollY;
+    //   if (offset > 80) {
+    //     setScrolled(true);
+    //   } else {
+    //     setScrolled(false);
+    //   }
+    // };
+
+    //   window.addEventListener('scroll', handleScroll);
+
+    //   return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    //   };
   }, []);
-  
+
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
-  
+
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'py-3 glassmorphism shadow-sm' 
-          : 'py-5 bg-transparent'
-      }`}
+    <header
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 glassmorphism shadow-sm"
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={sha} alt="" className='size-24' />
         </Link>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <NavLink to="/" label="Home" active={location.pathname === '/'} />
@@ -61,7 +57,7 @@ const Header: React.FC = () => {
           <NavLink to="/about" label="About" active={location.pathname === '/about'} />
           <NavLink to="/contact" label="Contact" active={location.pathname === '/contact'} />
         </nav>
-        
+
         {/* Actions */}
         <div className="hidden md:flex items-center gap-4">
           <button aria-label="Search" className="p-2 text-neutral-600 hover:text-primary-500 transition-colors">
@@ -70,22 +66,21 @@ const Header: React.FC = () => {
           <Link to="/jobs" className="btn btn-outline">Find Jobs</Link>
           <Link to="/employers" className="btn btn-primary ">Post a Job</Link>
         </div>
-        
+
         {/* Mobile menu button */}
-        <button 
-          onClick={() => setIsOpen(!isOpen)} 
+        <button
+          onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-      
+
       {/* Mobile Navigation */}
-      <div 
-        className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-screen py-4 opacity-100 visible' : 'max-h-0 py-0 opacity-0 invisible overflow-hidden'
-        }`}
+      <div
+        className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen py-4 opacity-100 visible' : 'max-h-0 py-0 opacity-0 invisible overflow-hidden'
+          }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-4">
           <Link to="/" className="py-2 text-lg">Home</Link>
@@ -112,11 +107,10 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ to, label, active }) => {
   return (
-    <Link 
+    <Link
       to={to}
-      className={`relative text-base font-medium transition-colors ${
-        active ? 'text-primary-500' : 'text-neutral-800 hover:text-primary-500'
-      }`}
+      className={`relative text-base font-medium transition-colors ${active ? 'text-primary-500' : 'text-neutral-800 hover:text-primary-500'
+        }`}
     >
       {label}
       {active && (

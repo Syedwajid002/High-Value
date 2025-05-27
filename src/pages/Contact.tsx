@@ -11,14 +11,14 @@ const Contact: React.FC = () => {
     subject: '',
     message: '',
   });
-  
+
   const [formSubmitted, setFormSubmitted] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
           <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-primary-500 opacity-10"></div>
           <div className="absolute -left-32 -bottom-32 w-[30rem] h-[30rem] rounded-full bg-secondary-500 opacity-10"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Contact Form Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                   <p className="text-white/80 mb-8">
                     Fill out the form and our team will get back to you within 24 hours.
                   </p>
-                  
+
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
@@ -80,30 +80,30 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Call Us</h3>
-                        <p className="text-white/80">+91 7097256839</p>
+                        <p className="text-white/80">+91 8686647876</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
                         <Mail size={20} />
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Email Us</h3>
-                        <p className="text-white/80">contact@High Value Recruitment Agency.com</p>
+                        <p className="text-white/80">contact@hvsolutons.com</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
                         <MapPin size={20} />
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Visit Us</h3>
-                        <p className="text-white/80">11-25-784 Kapil Towers,Nakkalgutta,HNK </p>
+                        <p className="text-white/80">1-8-552/B Kapil Tower, Nakkala Gutta, Hanamkonda, Telangana 506001</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4">
                         <Clock size={20} />
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-12">
                     <h3 className="font-medium mb-4">Connect With Us</h3>
                     <div className="flex space-x-3">
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-              
+
               {/* Contact Form */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
               >
                 <div className="bg-white rounded-xl shadow-sm p-8">
                   <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                  
+
                   {formSubmitted ? (
                     <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-6 text-center">
                       <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
                       <p className="mb-4">
                         Thank you for reaching out. Our team will get back to you as soon as possible.
                       </p>
-                      <button 
+                      <button
                         onClick={() => setFormSubmitted(false)}
                         className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                       >
@@ -189,7 +189,7 @@ const Contact: React.FC = () => {
                             required
                           />
                         </div>
-                        
+
                         <div>
                           <label htmlFor="email" className="block text-neutral-700 font-medium mb-2">
                             Your Email
@@ -205,7 +205,7 @@ const Contact: React.FC = () => {
                             required
                           />
                         </div>
-                        
+
                         <div>
                           <label htmlFor="phone" className="block text-neutral-700 font-medium mb-2">
                             Phone Number
@@ -220,7 +220,7 @@ const Contact: React.FC = () => {
                             placeholder="(123) 456-7890"
                           />
                         </div>
-                        
+
                         <div>
                           <label htmlFor="company" className="block text-neutral-700 font-medium mb-2">
                             Company (Optional)
@@ -236,7 +236,7 @@ const Contact: React.FC = () => {
                           />
                         </div>
                       </div>
-                      
+
                       <div className="mb-6">
                         <label htmlFor="subject" className="block text-neutral-700 font-medium mb-2">
                           Subject
@@ -258,7 +258,7 @@ const Contact: React.FC = () => {
                           <option value="Other">Other</option>
                         </select>
                       </div>
-                      
+
                       <div className="mb-6">
                         <label htmlFor="message" className="block text-neutral-700 font-medium mb-2">
                           Your Message
@@ -274,7 +274,7 @@ const Contact: React.FC = () => {
                           required
                         ></textarea>
                       </div>
-                      
+
                       <div className="flex items-center mb-6">
                         <input
                           type="checkbox"
@@ -286,7 +286,7 @@ const Contact: React.FC = () => {
                           I agree to the <a href="#" className="text-primary-500 hover:underline">Privacy Policy</a> and consent to being contacted regarding my inquiry.
                         </label>
                       </div>
-                      
+
                       <button
                         type="submit"
                         className="w-full py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors"
@@ -301,20 +301,20 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Map Section */}
       <section className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold mb-4">Visit Our Office</h2>
             <p className="text-neutral-600">
-              We'd love to meet you in person. Our headquarters is located in the heart of San Francisco.
+              We'd love to meet you in person. Our headquarters is located at Nakkal Gutta, Hanamkonda.
             </p>
           </div>
-          
+
           <div className="relative h-96 rounded-xl overflow-hidden shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.05794200163!2d-122.4376!3d37.7599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1620964214467!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.51524124889!2d79.55387747404308!3d18.00127658299446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f301ad58f1b%3A0x304df48d488a05ad!2sKapil%20Kakatiya%20Tower!5e0!3m2!1sen!2sin!4v1748377905956!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -325,7 +325,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -335,35 +335,35 @@ const Contact: React.FC = () => {
               Find answers to common questions about our services and platform
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto space-y-6">
-            <FaqItem 
+            <FaqItem
               question="How can I post a job on High Value Recruitment Agency?"
               answer="To post a job, you'll need to create an employer account. Once registered, you can click on 'Post a Job' from your dashboard and follow the prompts to create your job listing."
               index={0}
             />
-            <FaqItem 
+            <FaqItem
               question="What is the cost to post a job?"
               answer="We offer various pricing plans to suit different business needs. Our Basic plan starts at $199 per month. You can view all our pricing options on the Employers page."
               index={1}
             />
-            <FaqItem 
+            <FaqItem
               question="How long does it take to find candidates?"
               answer="Many employers start receiving applications within 24 hours of posting a job. The time to fill a position varies based on the role, industry, and location, but our average time-to-hire is 18 days."
               index={2}
             />
-            <FaqItem 
+            <FaqItem
               question="Can I search for candidates directly?"
               answer="Yes, our Professional and Enterprise plans include access to our candidate database, allowing you to search for and reach out to qualified professionals directly."
               index={3}
             />
-            <FaqItem 
+            <FaqItem
               question="How do I create a candidate profile?"
               answer="Job seekers can create a profile by clicking 'Sign Up' and selecting 'Job Seeker'. You'll need to provide your basic information, upload your resume, and complete your profile details."
               index={4}
             />
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-neutral-600 mb-4">
               Still have questions? We're here to help.
@@ -386,7 +386,7 @@ interface FaqItemProps {
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, index }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -406,11 +406,10 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, index }) => {
           </svg>
         </span>
       </button>
-      
-      <div 
-        className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-40 py-4' : 'max-h-0 py-0'
-        }`}
+
+      <div
+        className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-40 py-4' : 'max-h-0 py-0'
+          }`}
       >
         <p className="text-neutral-600">{answer}</p>
       </div>

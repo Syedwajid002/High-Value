@@ -56,9 +56,13 @@ const job = {
   }
 };
 
+const handleClick = () => {
+  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdmNo0MewBCoUJ8ZmYHm4HjwnKTg2enO4hmWhXJ0Gq5PQ5zKA/viewform?usp=header";
+};
+
 const JobDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  
+
   return (
     <div className="bg-neutral-50 py-12">
       <div className="container mx-auto px-4">
@@ -68,11 +72,11 @@ const JobDetails: React.FC = () => {
             Back to Jobs
           </Link>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
@@ -81,9 +85,9 @@ const JobDetails: React.FC = () => {
                 {/* Job Header */}
                 <div className="p-6 border-b border-neutral-100">
                   <div className="flex flex-col md:flex-row md:items-center">
-                    <img 
-                      src={job.logo} 
-                      alt={`${job.company} logo`} 
+                    <img
+                      src={job.logo}
+                      alt={`${job.company} logo`}
                       className="w-16 h-16 object-cover rounded-lg mr-4 mb-4 md:mb-0"
                     />
                     <div>
@@ -106,7 +110,7 @@ const JobDetails: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Key Details */}
                 <div className="p-6 border-b border-neutral-100 grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex items-center">
@@ -137,10 +141,11 @@ const JobDetails: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Actions */}
                 <div className="p-6 flex flex-wrap gap-3">
-                  <button className="btn btn-primary flex-grow md:flex-grow-0">Apply Now</button>
+                  <button className="btn btn-primary flex-grow md:flex-grow-0"
+                    onClick={handleClick}>Apply Now</button>
                   <button className="btn btn-outline flex-grow md:flex-grow-0">
                     <Heart size={18} />
                     Save Job
@@ -150,26 +155,26 @@ const JobDetails: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
+
               {/* Job Description */}
               <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
                 <h2 className="text-xl font-bold mb-4">Job Description</h2>
                 <p className="text-neutral-700 mb-6 leading-relaxed">{job.description}</p>
-                
+
                 <h3 className="text-lg font-semibold mb-3">Responsibilities</h3>
                 <ul className="list-disc pl-5 mb-6 space-y-2 text-neutral-700">
                   {job.responsibilities.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                
+
                 <h3 className="text-lg font-semibold mb-3">Requirements</h3>
                 <ul className="list-disc pl-5 mb-6 space-y-2 text-neutral-700">
                   {job.requirements.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                
+
                 <h3 className="text-lg font-semibold mb-3">Benefits</h3>
                 <ul className="list-disc pl-5 space-y-2 text-neutral-700">
                   {job.benefits.map((item, index) => (
@@ -177,15 +182,18 @@ const JobDetails: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
+
               {/* Apply Section */}
               <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-md p-8 text-white">
-                <h2 className="text-2xl font-bold mb-3">Ready to Apply?</h2>
+                <button className="text-2xl font-bold mb-3"
+                  onClick={handleClick}
+                >Ready to Apply?</button>
                 <p className="mb-6 text-white/90">
                   Submit your application now and take the next step in your career journey.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="btn bg-white text-primary-600 hover:bg-neutral-100">Apply Now</button>
+                  <button className="btn bg-white text-primary-600 hover:bg-neutral-100"
+                    onClick={handleClick}>Apply Now</button>
                   <button className="btn bg-primary-400 bg-opacity-30 hover:bg-opacity-40">
                     Save for Later
                   </button>
@@ -193,10 +201,10 @@ const JobDetails: React.FC = () => {
               </div>
             </motion.div>
           </div>
-          
+
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
@@ -205,15 +213,15 @@ const JobDetails: React.FC = () => {
               <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
                 <h2 className="text-xl font-bold mb-4">Company Information</h2>
                 <div className="mb-4">
-                  <img 
-                    src={job.logo} 
-                    alt={`${job.company} logo`} 
+                  <img
+                    src={job.logo}
+                    alt={`${job.company} logo`}
                     className="w-16 h-16 object-cover rounded-lg"
                   />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{job.companyInfo.name}</h3>
                 <p className="text-neutral-600 mb-4">{job.companyInfo.description}</p>
-                
+
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Building size={16} className="text-neutral-500 mr-2" />
@@ -234,17 +242,17 @@ const JobDetails: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                
-                <a 
-                  href={job.companyInfo.website} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+
+                <a
+                  href={job.companyInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 inline-block text-primary-500 hover:underline"
                 >
                   Visit Website
                 </a>
               </div>
-              
+
               {/* Similar Jobs */}
               <div className="bg-white rounded-xl shadow-sm p-6">
                 <h2 className="text-xl font-bold mb-4">Similar Jobs</h2>
@@ -275,7 +283,7 @@ const JobDetails: React.FC = () => {
       </div>
     </div>
 
-    
+
   );
 };
 

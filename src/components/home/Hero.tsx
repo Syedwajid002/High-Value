@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   const searchRef = useRef<HTMLInputElement>(null);
-  
+
   useEffect(() => {
     if (searchRef.current) {
       searchRef.current.focus();
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-primary-500 opacity-10"></div>
         <div className="absolute -left-32 -bottom-32 w-[30rem] h-[30rem] rounded-full bg-secondary-500 opacity-10"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <motion.div
@@ -28,15 +28,15 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-3xl lg:text-6xl font-bold mb-6 text-gray-400">
-              Find Your Dream Career With <span className="text-white">High Value Recruitment Agency </span> 
-              
+              Find Your Dream Career With <span className="text-white">High Value Recruitment Agency </span>
+
             </h1>
             <p className="text-xl md:text-2xl text-neutral-200 mb-8">
-              Connecting exceptional talent with world-class companies.
-              Your perfect job match is just a search away.
+              Empowering the Future of Work — At Unmatched Scale
+
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               </Link>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Wave Divider */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="w-full h-auto text-white fill-current">
