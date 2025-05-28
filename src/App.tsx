@@ -10,6 +10,7 @@ import Employers from './pages/Employers';
 import Candidates from './pages/Candidates';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import JobMela from './pages/JobMela'
 
 // Layout components
 import Layout from './components/layout/Layout';
@@ -27,6 +28,8 @@ function App() {
             <Route path="candidates" element={<Candidates />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="job-mela" element={<JobMela />} />
+
           </Route>
         </Routes>
       </AnimatePresence>

@@ -52,6 +52,7 @@ const Header: React.FC = () => {
               <Link to="/jobs?category=healthcare" className="block px-4 py-2 rounded-md hover:bg-neutral-50">Healthcare</Link>
             </div>
           </div>
+          <NavLink to="/job-mela" label="Job Mela" active={location.pathname === '/job-mela'} />
           <NavLink to="/employers" label="Employers" active={location.pathname === '/employers'} />
           <NavLink to="/candidates" label="Candidates" active={location.pathname === '/candidates'} />
           <NavLink to="/about" label="About" active={location.pathname === '/about'} />

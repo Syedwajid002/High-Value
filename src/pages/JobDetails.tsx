@@ -57,8 +57,8 @@ const job = {
 };
 
 const handleClick = () => {
-  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdmNo0MewBCoUJ8ZmYHm4HjwnKTg2enO4hmWhXJ0Gq5PQ5zKA/viewform?usp=header";
-};
+  window.location.href = "https://forms.gle/RE4fqx1MGpuwvy8g6"
+}
 
 const JobDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();

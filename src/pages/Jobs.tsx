@@ -106,6 +106,10 @@ const allJobs = [
   }
 ];
 
+const handleClick = () => {
+  window.location.href = "https://forms.gle/RE4fqx1MGpuwvy8g6";
+};
+
 const jobTypes = ['Full-time', 'Part-time', 'Contract', 'Temporary', 'Internship'];
 const experienceLevels = ['Entry Level', 'Mid Level', 'Senior Level', 'Director', 'Executive'];
 const categories = ['Tech', 'Finance', 'Healthcare', 'Marketing', 'Design', 'Sales'];
@@ -442,7 +446,9 @@ const JobCard: React.FC<JobCardProps> = ({ job, index }) => {
 
           <div className="md:ml-auto flex flex-col md:flex-row gap-3 items-center">
             <span className="text-sm text-neutral-500">{job.postedDate}</span>
-            <button className="w-full md:w-auto px-5 py-2 bg-primary-50 text-primary-600 font-medium rounded-lg hover:bg-primary-100 transition-colors">
+            <button className="w-full md:w-auto px-5 py-2 bg-primary-50 text-primary-600 font-medium rounded-lg hover:bg-primary-100 transition-colors"
+              onClick={handleClick}
+            >
               Apply Now
             </button>
           </div>
