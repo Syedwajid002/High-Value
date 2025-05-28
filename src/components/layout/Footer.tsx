@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 <MapPin size={20} className="text-primary-400 shrink-0 mt-1" />
                 <div>
                   <p>Multiple Locations Across the globe</p>
-                  <span>Nakkalgutta, Hanamakonda</span>
+                  <span>Warangal</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
