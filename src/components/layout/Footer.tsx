@@ -57,13 +57,13 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary-400 shrink-0 mt-1" />
                 <div>
-                  <p>Main Branch Kapil Towers,</p>
+                  <p>Multiple Locations Across the globe</p>
                   <span>Nakkalgutta, Hanamakonda</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-primary-400" />
-                <p>+91 7097654357</p>
+                <p>+91 8686647876</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={20} className="text-primary-400" />
