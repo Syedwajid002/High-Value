@@ -4,12 +4,6 @@ import { ArrowRight } from "lucide-react";
 
 const sections = [
     {
-        title: "India’s Second Largest Mega Job Mela Across 200 Cities",
-        subtitle: "Empowering 5 Lakh Talents. Enriching Millions of Lives.",
-        description:
-            "We are proud to announce one of the largest employment drives in Indian history — a nationwide Mega Job Mela spanning over 200 cities with the goal of recruiting 500,000 skilled and deserving individuals from every corner of the country. This massive initiative reflects our unwavering commitment to shaping a stronger, more inclusive, and economically empowered India.",
-    },
-    {
         title: "🌟 What We’re Doing",
         description:
             "Our Mega Job Mela is not just about filling vacancies — it’s about building futures. We’re connecting half a million Indians to meaningful employment across sectors such as:",
@@ -61,8 +55,38 @@ export default function MegaJobMelaPage() {
         window.location.href = "https://forms.gle/RE4fqx1MGpuwvy8g6"
     }
     return (
-        <div className="bg-white text-blue-900 min-h-screen py-12 px-6 md:px-20 font-sans">
-            <div className="max-w-6xl mx-auto space-y-14">
+        <div>
+            <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-24">
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute -right-64 -top-64 w-[40rem] h-[40rem] rounded-full bg-primary-500 opacity-10"></div>
+                    <div className="absolute -left-32 -bottom-32 w-[30rem] h-[30rem] rounded-full bg-secondary-500 opacity-10"></div>
+                </div>
+
+                <div className="container mx-auto  relative z-10">
+                    <div className="max-w-full">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                                <span className="text-red-700">India’s Second Largest Mega Job Mela Across 200 Cities
+                                </span>
+                                <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
+                                    Empowering 5 Lakh Talents. Enriching Millions of Lives
+                                </h3>
+                            </h1>
+                            <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
+                                We are a high-value recruitment agency dedicated to delivering top-tier talent at extraordinary scale. Backed by a deep commitment to precision hiring and workforce transformation, our agency is proudly contracted to recruit 500,000 employees exclusively for Amrown, a global disruptor in technology, digital infrastructure, and human-centric innovation.
+
+                                Our mission is to redefine employment by aligning the right people with the right roles—across 200+ cities in India—within a framework of integrity, growth, and impact.
+
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+            <div className="max-w-6xl mx-auto space-y-14 md:px-20 md:py-6">
                 {sections.map((section, idx) => (
                     <motion.div
                         key={idx}
@@ -74,11 +98,6 @@ export default function MegaJobMelaPage() {
                             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#902537]">
                                 {section.title}
                             </h2>
-                            {section.subtitle && (
-                                <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
-                                    {section.subtitle}
-                                </h3>
-                            )}
                             {section.description && (
                                 <p className="text-lg md:text-xl text-blue-900/80 leading-relaxed">
                                     {section.description}
