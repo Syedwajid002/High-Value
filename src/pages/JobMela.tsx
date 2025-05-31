@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const sections = [
     {
-        title: "🌟 What We’re Doing",
+        title: "What We’re Doing",
         description:
             "Our Mega Job Mela is not just about filling vacancies — it’s about building futures. We’re connecting half a million Indians to meaningful employment across sectors such as:",
         list: [
@@ -20,25 +20,25 @@ const sections = [
         ],
     },
     {
-        title: "🤝 How We’re Changing Lives",
+        title: "How We’re Changing Lives",
         list: [
-            "👨‍👩‍👧‍👦 Direct Impact on 500,000 Families: Each job offered means a better future for an entire family, bringing in financial stability, access to better healthcare, education, and an improved quality of life.",
-            "📈 Uplifting Local Economies: With over 200 cities participating, the influx of employment opportunities will boost local economies, support small businesses, and drive regional development.",
-            "🧠 Skilling & Upskilling for the Future: We’re not just hiring — we’re also training and skilling the workforce to meet industry standards through specialized onboarding and learning programs in collaboration with top training partners.",
+            "Direct Impact on 500,000 Families: Each job offered means a better future for an entire family, bringing in financial stability, access to better healthcare, education, and an improved quality of life.",
+            "Uplifting Local Economies: With over 200 cities participating, the influx of employment opportunities will boost local economies, support small businesses, and drive regional development.",
+            "Skilling & Upskilling for the Future: We’re not just hiring — we’re also training and skilling the workforce to meet industry standards through specialized onboarding and learning programs in collaboration with top training partners.",
         ],
     },
     {
         title: "National Benefits – Economically, Socially & Financially",
         list: [
-            "🏭 Economic Growth: Adding 500,000 productive contributors to the economy will enhance the national GDP, boost productivity, and reduce unemployment levels substantially.",
-            "🕊 Social Inclusion & Equity: We are especially committed to ensuring inclusive hiring — offering equal opportunities to women, persons with disabilities, economically disadvantaged individuals, and fresh graduates.",
-            "💰 Financial Empowerment: Employment translates to financial independence, improved savings, investment capacity, and reduced burden on social welfare systems.",
-            "🧘 Mental Well-being & Stability: Having a stable job contributes to mental peace, reduced stress, and a more secure future for millions of Indian citizens.",
-            "🌱 Sustainable Development: This drive is a model for sustainable economic development — nurturing talent domestically and reducing dependence on external labor forces.",
+            "Economic Growth: Adding 500,000 productive contributors to the economy will enhance the national GDP, boost productivity, and reduce unemployment levels substantially.",
+            "Social Inclusion & Equity: We are especially committed to ensuring inclusive hiring — offering equal opportunities to women, persons with disabilities, economically disadvantaged individuals, and fresh graduates.",
+            "Financial Empowerment: Employment translates to financial independence, improved savings, investment capacity, and reduced burden on social welfare systems.",
+            "Mental Well-being & Stability: Having a stable job contributes to mental peace, reduced stress, and a more secure future for millions of Indian citizens.",
+            "Sustainable Development: This drive is a model for sustainable economic development — nurturing talent domestically and reducing dependence on external labor forces.",
         ],
     },
     {
-        title: "🛠 Building India’s Workforce of the Future",
+        title: "Building India’s Workforce of the Future",
         description:
             "This is more than a job fair — it’s a movement toward building “Bharat’s Skilled Workforce” — a future-ready talent pool that powers innovation, growth, and prosperity for generations to come. We invite you to be a part of this historic initiative — whether as a job seeker, a corporate partner, or a contributor to India’s transformation story.",
     },

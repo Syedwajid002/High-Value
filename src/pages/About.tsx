@@ -4,32 +4,14 @@ import { Users, Award, Target, Clock, MapPin, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Team data
-const teamMembers = [
-  {
-    name: 'Mohd Muneer',
-    position: 'CEO & Founder',
-    bio: 'With over 15 years in recruitment and HR tech, Jennifer founded High Value Recruitment Agency to transform how companies find talent.',
-    avatar: 'https://pbs.twimg.com/profile_images/1631766593578631169/k3W6R53P_400x400.jpg',
-  },
-  {
-    name: 'Michael Chen',
-    position: 'CTO',
-    bio: 'Michael leads our technology team, focusing on building innovative solutions that connect employers with the right candidates.',
-    avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=120',
-  },
-  {
-    name: 'Sarah Johnson',
-    position: 'Head of Client Success',
-    bio: 'Sarah ensures our clients achieve their recruitment goals by providing strategic guidance and support.',
-    avatar: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=120',
-  },
-  {
-    name: 'David Rodriguez',
-    position: 'Director of Marketing',
-    bio: 'David develops our marketing strategies, ensuring High Value Recruitment Agency reaches both job seekers and employers effectively.',
-    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=120',
-  },
-];
+const teamMembers =
+{
+  name: 'Mohd Muneer',
+  position: 'CEO & Founder',
+  bio: 'With over 15 years in recruitment and HR tech, Jennifer founded High Value Recruitment Agency to transform how companies find talent.',
+  avatar: 'https://pbs.twimg.com/profile_images/1631766593578631169/k3W6R53P_400x400.jpg',
+}
+  ;
 
 // Values data
 const values = [
@@ -97,7 +79,7 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">🤝 Our Strategic Alliance with Amrown</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6"> Our Strategic Alliance with Amrown</h2>
               <p className="text-neutral-700 mb-4 leading-relaxed">
                 In 2025, we signed an exclusive Memorandum of Understanding (MoU) with Amrown, a pioneering tech-driven startup poised to revolutionize industries across 80+ nations. Under this historic partnership:
                 <ul>
@@ -136,7 +118,7 @@ const About: React.FC = () => {
       <section className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">📈 What Makes Us Different
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"> What Makes Us Different
             </h2>
             <p className="text-neutral-600 text-lg">
               The principles that guide everything we do at High Value Recruitment Agency
@@ -159,22 +141,41 @@ const About: React.FC = () => {
 
       {/* Our Team */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
-            <p className="text-neutral-600 text-lg">
-              Meet the experts behind High Value Recruitment Agency who are passionate about connecting talent with opportunity
-            </p>
-          </div>
+        <div className="px-4 py-16 mx-auto w-full sm:max-w-full md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-2" data-aos="fade-up">
+            <div data-aos="fade-left">
+              <div className="card relative my-2 lg:order-first">
+                <div className="overflow-hidden border-4 border-red-900 rounded-full md:w-96 md:h-96 w-60 h-60 mx-auto">
+                  {teamMembers?.avatar ? (
+                    <img
+                      className="object-cover md:w-96 md:h-96 rounded-full w-60 h-60 mx-auto"
+                      src={teamMembers.avatar}
+                      alt={teamMembers.name}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard
-                key={index}
-                member={member}
-                index={index}
-              />
-            ))}
+                    />
+                  ) : (
+                    <p>Loading image...</p>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div data-aos="fade-right" className='w-full'>
+              <div className='my-10 lg:pl-10 w-full'>
+                <h5 className="mb-4 text-4xl font-extrabold leading-none">
+                  Our CEO
+                </h5>
+                <p className="mb-4 text-gray-900">
+                  Our CEO, Muneer, is the driving force behind High Value Recruitment Agency. With over 10 years of experience in the recruitment and HR industry, he brings deep insight, strategic thinking, and a clear vision to the company. Under his leadership, we've grown into a trusted agency known for delivering high-quality talent and exceptional client service. Muneer’s commitment to excellence and innovation continues to inspire our team and shape the future of recruitment.
+                </p>
+
+                <p className="mb-6 text-gray-900">
+                  Best regards,
+                  <br />
+                  {teamMembers?.name || "Loading name..."}
+                </p>
+              </div>
+              <hr className="mb-5 border-gray-300 lg:hidden" />
+            </div>
           </div>
         </div>
       </section>
@@ -268,7 +269,7 @@ const About: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold">Call Us</h3>
-                      <p className="text-neutral-600">+91 709765435</p>
+                      <p className="text-neutral-600">+91 8686647876</p>
                     </div>
                   </div>
                 </div>

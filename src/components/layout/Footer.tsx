@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
               Connecting exceptional talent with leading companies worldwide. Your career journey starts here.
             </p>
             <div className="flex space-x-4">
-              <SocialLink icon={<Linkedin size={20} />} href="https://linkedin.com" label="LinkedIn" />
-              <SocialLink icon={<Twitter size={20} />} href="https://x.com/AMROWN" label="Twitter" />
-              <SocialLink icon={<Facebook size={20} />} href="https://facebook.com" label="Facebook" />
-              <SocialLink icon={<Instagram size={20} />} href="https://instagram.com" label="Instagram" />
+              <SocialLink icon={<Linkedin size={20} />} href="https://www.linkedin.com/company/high-value-recruitments-agency" label="LinkedIn" />
+              <SocialLink icon={<Twitter size={20} />} href="https://x.com/hvrasolutions" label="Twitter" />
+              <SocialLink icon={<Facebook size={20} />} href="https://www.facebook.com/profile.php?id=61577093120526" label="Facebook" />
+              <SocialLink icon={<Instagram size={20} />} href="https://www.instagram.com/hvrasolutions/" label="Instagram" />
             </div>
           </div>
 
