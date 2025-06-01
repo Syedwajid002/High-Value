@@ -249,7 +249,7 @@ const About: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold">Our Headquarters</h3>
-                      <p className="text-neutral-600">11-24-786 Nakkalgutta HNK</p>
+                      <p className="text-neutral-600">Hanamkonda, Warangal</p>
                     </div>
                   </div>
 

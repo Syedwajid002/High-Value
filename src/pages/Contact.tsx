@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Visit Us</h3>
-                        <p className="text-white/80">1-8-552/B Kapil Tower, Nakkala Gutta, Hanamkonda, Telangana 506001</p>
+                        <p className="text-white/80">Hanamkonda, Warangal 506001</p>
                       </div>
                     </div>
 
@@ -308,13 +308,13 @@ const Contact: React.FC = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold mb-4">Visit Our Office</h2>
             <p className="text-neutral-600">
-              We'd love to meet you in person. Our headquarters is located at Nakkal Gutta, Hanamkonda.
+              We'd love to meet you in person. Our headquarters is located at Warangal
             </p>
           </div>
 
           <div className="relative h-96 rounded-xl overflow-hidden shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.51524124889!2d79.55387747404308!3d18.00127658299446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f301ad58f1b%3A0x304df48d488a05ad!2sKapil%20Kakatiya%20Tower!5e0!3m2!1sen!2sin!4v1748377905956!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121454.16469730063!2d79.52166948746213!3d17.9581315701284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a33450bd75e4be7%3A0x9306909c277bc137!2sWarangal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1748805080931!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
