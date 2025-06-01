@@ -259,7 +259,12 @@ const About: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email Us</h3>
-                      <p className="text-neutral-600">contact@hvrasolutions.com</p>
+                      <a
+                        href="mailto:hvrasolutions@gmail.com"
+                        className="text-Neutral-600 hover:text-primary-500 underline"
+                      >
+                        hvrasolutions@gmail.com
+                      </a>
                     </div>
                   </div>
 

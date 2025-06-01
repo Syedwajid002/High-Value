@@ -67,8 +67,15 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={20} className="text-primary-400" />
-                <p>contact@hvrasolutions.com</p>
+                <a
+                  href="mailto:hvrasolutions@gmail.com"
+                  className="text-neutral-400 hover:underline"
+                >
+                  hvrasolutions@gmail.com
+                </a>
               </div>
+
+
             </div>
           </div>
         </div>

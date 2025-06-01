@@ -5,6 +5,7 @@ import Companies from '../components/home/Companies';
 import HowItWorks from '../components/home/HowItWorks';
 import Testimonials from '../components/home/Testimonials';
 import CallToAction from '../components/home/CallToAction';
+import VisitCounter from './Counter';
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <HowItWorks />
       <Testimonials />
       <CallToAction />
+      <VisitCounter />
     </div>
   );
 };
