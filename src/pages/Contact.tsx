@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-medium mb-1">Visit Us</h3>
-                        <p className="text-white/80">Hanamkonda, Warangal 506001</p>
+                        <p className="text-white/80">Gopalpur Hanamkonda,Warangal 506170</p>
                       </div>
                     </div>
 
