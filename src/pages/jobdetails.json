@@ -1,0 +1,316 @@
+[
+  {
+    "id": "1",
+    "title": "Chief Human Resources Officer",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "San Francisco, CA",
+    "salary": "$120,000 - $150,000",
+    "type": "Full-time",
+    "category": "tech",
+    "postedDate": "2 days ago",
+    "featured": true,
+    "description": "We are looking for an experienced Chief Human Resources Officer to oversee all HR operations, policies, and programs across the company.",
+    "responsibilities": [
+      "Lead HR strategy, workforce planning, and policy development",
+      "Oversee recruitment, retention, and talent development initiatives",
+      "Ensure compliance with labor laws and ethical standards",
+      "Foster a positive workplace culture and employee engagement",
+      "Guide leadership teams in performance management",
+      "Implement DEI initiatives and employee wellness programs"
+    ],
+    "requirements": [
+      "10+ years in senior HR leadership roles",
+      "Strong knowledge of HR best practices and labor laws",
+      "Proven experience in strategic workforce planning",
+      "Excellent communication and negotiation skills",
+      "Ability to lead change and drive organizational transformation"
+    ],
+    "benefits": [
+      "Executive-level compensation and bonuses",
+      "Comprehensive health and wellness plans",
+      "Retirement plan with company match",
+      "Leadership development programs",
+      "Paid sabbatical after 5 years",
+      "Flexible working arrangements"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "Amrown is a global company specializing in innovative solutions for the technology and services sector, with a focus on people-first culture.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Technology & Services",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Product Manager",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "Remote",
+    "salary": "$110,000 - $135,000",
+    "type": "Full-time",
+    "category": "tech",
+    "postedDate": "1 day ago",
+    "featured": true,
+    "description": "We're seeking a skilled Product Manager to lead cross-functional teams in delivering innovative products from concept to launch.",
+    "responsibilities": [
+      "Define product vision, strategy, and roadmap",
+      "Collaborate with engineering, design, and marketing teams",
+      "Gather and analyze market trends and customer feedback",
+      "Prioritize product features based on business goals",
+      "Oversee the product lifecycle from planning to release"
+    ],
+    "requirements": [
+      "5+ years of experience in product management",
+      "Strong analytical, problem-solving, and organizational skills",
+      "Experience in Agile methodologies",
+      "Excellent communication and leadership abilities"
+    ],
+    "benefits": [
+      "Competitive salary and bonuses",
+      "Remote-first work culture",
+      "Professional development stipend",
+      "Comprehensive health insurance",
+      "Generous PTO and parental leave"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "A leading innovator in the tech industry, Amrown develops products that improve business efficiency and customer experiences worldwide.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Technology",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "3",
+    "title": "UX/UI Designer",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "New York, NY",
+    "salary": "$95,000 - $120,000",
+    "type": "Full-time",
+    "category": "design",
+    "postedDate": "3 days ago",
+    "description": "Join our creative team to design intuitive, engaging, and visually appealing digital products.",
+    "responsibilities": [
+      "Create wireframes, prototypes, and high-fidelity designs",
+      "Conduct user research and usability testing",
+      "Collaborate with developers to ensure accurate implementation",
+      "Maintain design systems and style guides"
+    ],
+    "requirements": [
+      "3+ years in UX/UI design",
+      "Proficiency in Figma, Sketch, or Adobe XD",
+      "Strong understanding of design principles and user-centered design",
+      "Experience with responsive and mobile-first design"
+    ],
+    "benefits": [
+      "Health, dental, and vision coverage",
+      "Flexible work hours",
+      "Annual design conference allowance",
+      "Collaborative and creative work environment"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "Amrown’s design team focuses on delivering beautiful and functional user experiences across all platforms.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Technology & Design",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Talent Acquisition Heads (Zonal/State)",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "Austin, TX",
+    "salary": "$130,000 - $160,000",
+    "type": "Full-time",
+    "category": "tech",
+    "postedDate": "5 days ago",
+    "description": "Lead recruitment strategy and operations for specific regions, building strong pipelines of top talent.",
+    "responsibilities": [
+      "Develop and execute talent acquisition strategies",
+      "Manage recruitment teams and hiring budgets",
+      "Partner with department heads to forecast staffing needs",
+      "Oversee employer branding initiatives"
+    ],
+    "requirements": [
+      "8+ years in recruitment leadership",
+      "Proven success in large-scale hiring",
+      "Strong knowledge of ATS and HR tech tools",
+      "Excellent negotiation and interpersonal skills"
+    ],
+    "benefits": [
+      "Attractive salary and performance bonuses",
+      "Regional travel allowances",
+      "Comprehensive benefits package",
+      "Professional growth opportunities"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "With operations across multiple states, Amrown prioritizes attracting and retaining the best talent in the industry.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Human Resources",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "5",
+    "title": "Financial Analyst",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/936137/pexels-photo-936137.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "Chicago, IL",
+    "salary": "$85,000 - $105,000",
+    "type": "Full-time",
+    "category": "finance",
+    "postedDate": "1 week ago",
+    "description": "Analyze financial data, prepare reports, and support decision-making processes for business growth.",
+    "responsibilities": [
+      "Perform financial forecasting and budgeting",
+      "Analyze financial statements and market trends",
+      "Prepare management reports and dashboards",
+      "Collaborate with departments for cost optimization"
+    ],
+    "requirements": [
+      "3+ years as a financial analyst",
+      "Strong skills in Excel and financial modeling",
+      "Understanding of accounting principles and regulations",
+      "Detail-oriented with strong analytical abilities"
+    ],
+    "benefits": [
+      "Competitive salary",
+      "Health and retirement benefits",
+      "Career development support",
+      "Flexible working hours"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "Amrown’s finance team is instrumental in ensuring strong fiscal health and sustainable growth.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Finance",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Marketing Specialist",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "Remote",
+    "salary": "$70,000 - $90,000",
+    "type": "Full-time",
+    "category": "marketing",
+    "postedDate": "3 days ago",
+    "description": "Plan, develop, and execute marketing campaigns that drive brand awareness and customer engagement.",
+    "responsibilities": [
+      "Develop and implement digital marketing strategies",
+      "Manage social media channels and content",
+      "Analyze campaign performance and optimize results",
+      "Collaborate with sales and product teams for alignment"
+    ],
+    "requirements": [
+      "2+ years in marketing roles",
+      "Strong copywriting and content creation skills",
+      "Experience with analytics tools (Google Analytics, etc.)",
+      "Creative mindset with attention to detail"
+    ],
+    "benefits": [
+      "Remote work flexibility",
+      "Annual training and upskilling allowance",
+      "Performance-based bonuses",
+      "Health insurance coverage"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "Amrown’s marketing team drives the company’s growth through creative campaigns and brand storytelling.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Marketing",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "7",
+    "title": "Performance Review Managers",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "Boston, MA",
+    "salary": "$75,000 - $95,000",
+    "type": "Full-time",
+    "category": "healthcare",
+    "postedDate": "4 days ago",
+    "description": "Oversee and enhance employee performance review processes to ensure fair and constructive evaluations.",
+    "responsibilities": [
+      "Manage annual and quarterly review cycles",
+      "Develop performance metrics and evaluation criteria",
+      "Train managers in providing effective feedback",
+      "Collaborate with HR to align reviews with career growth"
+    ],
+    "requirements": [
+      "5+ years in HR or performance management",
+      "Strong interpersonal and coaching skills",
+      "Knowledge of performance management tools",
+      "Ability to handle sensitive employee matters"
+    ],
+    "benefits": [
+      "Health, dental, and vision coverage",
+      "Flexible scheduling",
+      "Career advancement pathways",
+      "Employee wellness programs"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "Amrown fosters a performance-driven culture that values continuous feedback and professional growth.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Human Resources",
+      "website": "https://amrown.example.com"
+    }
+  },
+  {
+    "id": "8",
+    "title": "HR Policy Compliance Officers",
+    "company": "Amrown",
+    "logo": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=120",
+    "location": "Seattle, WA",
+    "salary": "$125,000 - $155,000",
+    "type": "Full-time",
+    "category": "tech",
+    "postedDate": "2 days ago",
+    "featured": true,
+    "description": "Ensure company policies comply with legal standards and are effectively communicated across the organization.",
+    "responsibilities": [
+      "Review and update HR policies regularly",
+      "Conduct compliance audits and investigations",
+      "Advise management on policy-related risks",
+      "Deliver training on compliance requirements"
+    ],
+    "requirements": [
+      "7+ years in HR compliance or related field",
+      "In-depth knowledge of labor and employment laws",
+      "Excellent analytical and problem-solving skills",
+      "Strong written and verbal communication"
+    ],
+    "benefits": [
+      "Executive-level benefits package",
+      "Flexible working arrangements",
+      "Legal and compliance training",
+      "Health and retirement plans"
+    ],
+    "companyInfo": {
+      "name": "Amrown",
+      "description": "Amrown’s compliance team ensures all company operations meet ethical and legal standards worldwide.",
+      "employees": "1000+",
+      "founded": "2005",
+      "industry": "Human Resources & Compliance",
+      "website": "https://amrown.example.com"
+    }
+  }
+]

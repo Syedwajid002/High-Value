@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MapPin, Clock, DollarSign, Briefcase, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import featuredJobs from './../../pages/jobdetails.json'
 // Types
 interface Job {
   id: string;
@@ -16,56 +16,56 @@ interface Job {
   featured?: boolean;
 }
 
-const handleClick = () => {
+const handleClick = (id: string) => {
   window.location.href = "https://forms.gle/RE4fqx1MGpuwvy8g6";
 };
 
 
 // Mock data
-const featuredJobs: Job[] = [
-  {
-    id: '1',
-    title: 'Chief Human Resources Officer',
-    company: 'Amrown',
-    logo: 'https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=120',
-    location: 'San Francisco, CA',
-    salary: '$120,000 - $150,000',
-    type: 'Full-time',
-    postedDate: '2 days ago',
-    featured: true
-  },
-  {
-    id: '2',
-    title: 'Talent Acquisition Heads (Zonal/State)',
-    company: 'Amrown',
-    logo: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=120',
-    location: 'Remote',
-    salary: '$110,000 - $135,000',
-    type: 'Full-time',
-    postedDate: '1 day ago',
-    featured: true
-  },
-  {
-    id: '3',
-    title: 'Performance Review Managers',
-    company: 'DesignHub',
-    logo: 'https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=120',
-    location: 'New York, NY',
-    salary: '$95,000 - $120,000',
-    type: 'Full-time',
-    postedDate: '3 days ago'
-  },
-  {
-    id: '4',
-    title: 'HR Policy Compliance Officers',
-    company: 'CloudSolutions',
-    logo: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=120',
-    location: 'Austin, TX',
-    salary: '$130,000 - $160,000',
-    type: 'Full-time',
-    postedDate: '5 days ago'
-  }
-];
+// const featuredJobs: Job[] = [
+//   {
+//     id: '1',
+//     title: 'Chief Human Resources Officer',
+//     company: 'Amrown',
+//     logo: 'https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=120',
+//     location: 'San Francisco, CA',
+//     salary: '$120,000 - $150,000',
+//     type: 'Full-time',
+//     postedDate: '2 days ago',
+//     featured: true
+//   },
+//   {
+//     id: '2',
+//     title: 'Talent Acquisition Heads (Zonal/State)',
+//     company: 'Amrown',
+//     logo: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=120',
+//     location: 'Remote',
+//     salary: '$110,000 - $135,000',
+//     type: 'Full-time',
+//     postedDate: '1 day ago',
+//     featured: true
+//   },
+//   {
+//     id: '3',
+//     title: 'Performance Review Managers',
+//     company: 'DesignHub',
+//     logo: 'https://images.pexels.com/photos/3182835/pexels-photo-3182835.jpeg?auto=compress&cs=tinysrgb&w=120',
+//     location: 'New York, NY',
+//     salary: '$95,000 - $120,000',
+//     type: 'Full-time',
+//     postedDate: '3 days ago'
+//   },
+//   {
+//     id: '4',
+//     title: 'HR Policy Compliance Officers',
+//     company: 'CloudSolutions',
+//     logo: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=120',
+//     location: 'Austin, TX',
+//     salary: '$130,000 - $160,000',
+//     type: 'Full-time',
+//     postedDate: '5 days ago'
+//   }
+// ];
 
 const container = {
   hidden: { opacity: 0 },
@@ -125,12 +125,16 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({ job }) => {
+  const navigate = useNavigate();
+  const handleClick = (id: any) => {
+    navigate(`/jobs/${id}`);
+  };
   return (
     <motion.div variants={item}>
-      {/* <Link to={`/jobs/${job.id}`} className="block"> */}
-      <Link to={`/jobs`} className="block">
+      <Link to={`/jobs/${job.id}`} className="block">
+        {/* <Link to={`/jobs`} className="block"> */}
 
-        <div className="card group h-full flex flex-col">
+        <div className="card group h-full flex flex-col" onClick={handleClick(job.id)}>
           {job.featured && (
             <div className="inline-block absolute top-4 right-4 bg-accent-500 text-white text-xs font-medium px-2 py-1 rounded">
               Featured
@@ -144,7 +148,9 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
               className="w-12 h-12 object-cover rounded-md mr-3"
             />
             <div>
-              <h3 className="font-semibold text-lg group-hover:text-primary-500 transition-colors">{job.title}</h3>
+              <h3 className="font-semibold text-lg group-hover:text-primary-500 transition-colors">
+                {job.title}
+              </h3>
               <p className="text-neutral-600">{job.company}</p>
             </div>
           </div>
@@ -169,9 +175,12 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
               <Clock size={16} className="mr-2" />
               <span className="text-sm">{job.postedDate}</span>
             </div>
-            <button className="text-primary-500 font-medium hover:underline"
+            <button
+              className="text-primary-500 font-medium hover:underline"
               onClick={handleClick}
-            >Apply</button>
+            >
+              Apply
+            </button>
           </div>
         </div>
       </Link>

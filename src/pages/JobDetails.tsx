@@ -2,72 +2,26 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { MapPin, Calendar, Clock, DollarSign, Briefcase, Share2, Bookmark, ChevronLeft, Heart, Building, GraduationCap, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import jobs from './jobdetails.json';
 
-// Mock job data
-const job = {
-  id: '1',
-  title: 'Senior Frontend Developer',
-  company: 'TechCorp',
-  logo: 'https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=120',
-  location: 'San Francisco, CA',
-  salary: '$120,000 - $150,000',
-  type: 'Full-time',
-  category: 'tech',
-  postedDate: '2 days ago',
-  featured: true,
-  description: 'We are looking for an experienced Frontend Developer to join our team and help us build beautiful, responsive web applications. The ideal candidate has a strong understanding of modern JavaScript frameworks, particularly React, and has experience building complex user interfaces.',
-  responsibilities: [
-    'Develop new user-facing features using React.js',
-    'Build reusable components and libraries for future use',
-    'Translate designs and wireframes into high-quality code',
-    'Optimize components for maximum performance across a vast array of web-capable devices and browsers',
-    'Coordinate with the design team to ensure seamless implementation of UI/UX designs',
-    'Integrate with backend services and APIs',
-    'Collaborate with other team members and stakeholders',
-    'Troubleshoot and debug issues'
-  ],
-  requirements: [
-    '5+ years of experience in frontend development',
-    'Strong proficiency in JavaScript, including ES6+ features',
-    'Thorough understanding of React.js and its core principles',
-    'Experience with popular React workflows (Redux, Hooks, etc.)',
-    'Knowledge of modern HTML/CSS standards and best practices',
-    'Experience with responsive design and cross-browser compatibility',
-    'Good understanding of SEO principles and ensuring that applications are accessible',
-    'Excellent problem-solving skills and attention to detail'
-  ],
-  benefits: [
-    'Competitive salary and equity package',
-    'Comprehensive health, dental, and vision insurance',
-    'Flexible work hours and remote work options',
-    'Professional development budget',
-    '401(k) matching',
-    'Generous vacation policy',
-    'Regular team events and activities',
-    'Modern office with snacks and beverages'
-  ],
-  companyInfo: {
-    name: 'TechCorp',
-    description: 'TechCorp is a leading technology company focused on creating innovative web and mobile applications that solve real-world problems. Founded in 2010, we have grown to over 500 employees worldwide and have been recognized as one of the best places to work in tech.',
-    employees: '500+',
-    founded: '2010',
-    industry: 'Technology',
-    website: 'https://techcorp.example.com'
-  }
-};
+console.log(jobs); // Should log the array of job objects
+
+
 
 const handleClick = () => {
   window.location.href = "https://forms.gle/RE4fqx1MGpuwvy8g6"
 }
 
 const JobDetails: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-
+  const { id } = useParams<{ id: any }>();
   return (
     <div className="bg-neutral-50 py-12">
       <div className="container mx-auto px-4">
         <div className="mb-6">
-          <Link to="/jobs" className="inline-flex items-center text-primary-600 hover:text-primary-700">
+          <Link
+            to="/jobs"
+            className="inline-flex items-center text-primary-600 hover:text-primary-700"
+          >
             <ChevronLeft size={16} className="mr-1" />
             Back to Jobs
           </Link>
@@ -86,25 +40,29 @@ const JobDetails: React.FC = () => {
                 <div className="p-6 border-b border-neutral-100">
                   <div className="flex flex-col md:flex-row md:items-center">
                     <img
-                      src={job.logo}
-                      alt={`${job.company} logo`}
+                      src={jobs[id - 1].logo}
+                      alt={`${jobs[id - 1].company} logo`}
                       className="w-16 h-16 object-cover rounded-lg mr-4 mb-4 md:mb-0"
                     />
                     <div>
-                      <h1 className="text-2xl md:text-3xl font-bold mb-1">{job.title}</h1>
-                      <p className="text-lg text-neutral-600 mb-3">{job.company}</p>
+                      <h1 className="text-2xl md:text-3xl font-bold mb-1">
+                        {jobs[id - 1].title}
+                      </h1>
+                      <p className="text-lg text-neutral-600 mb-3">
+                        {jobs[id - 1].company}
+                      </p>
                       <div className="flex flex-wrap gap-3">
                         <div className="flex items-center text-neutral-500">
                           <MapPin size={16} className="mr-1" />
-                          <span>{job.location}</span>
+                          <span>{jobs[id - 1].location}</span>
                         </div>
                         <div className="flex items-center text-neutral-500">
                           <Calendar size={16} className="mr-1" />
-                          <span>Posted {job.postedDate}</span>
+                          <span>Posted {jobs[id - 1].postedDate}</span>
                         </div>
                         <div className="flex items-center text-neutral-500">
                           <Clock size={16} className="mr-1" />
-                          <span>{job.type}</span>
+                          <span>{jobs[id - 1].type}</span>
                         </div>
                       </div>
                     </div>
@@ -119,7 +77,7 @@ const JobDetails: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-sm text-neutral-500">Salary</p>
-                      <p className="font-medium">{job.salary}</p>
+                      <p className="font-medium">{jobs[id - 1].salary}</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -128,7 +86,7 @@ const JobDetails: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-sm text-neutral-500">Job Type</p>
-                      <p className="font-medium">{job.type}</p>
+                      <p className="font-medium">{jobs[id - 1].type}</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -144,8 +102,12 @@ const JobDetails: React.FC = () => {
 
                 {/* Actions */}
                 <div className="p-6 flex flex-wrap gap-3">
-                  <button className="btn btn-primary flex-grow md:flex-grow-0"
-                    onClick={handleClick}>Apply Now</button>
+                  <button
+                    className="btn btn-primary flex-grow md:flex-grow-0"
+                    onClick={handleClick}
+                  >
+                    Apply Now
+                  </button>
                   <button className="btn btn-outline flex-grow md:flex-grow-0">
                     <Heart size={18} />
                     Save Job
@@ -159,25 +121,27 @@ const JobDetails: React.FC = () => {
               {/* Job Description */}
               <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
                 <h2 className="text-xl font-bold mb-4">Job Description</h2>
-                <p className="text-neutral-700 mb-6 leading-relaxed">{job.description}</p>
+                <p className="text-neutral-700 mb-6 leading-relaxed">
+                  {jobs[id - 1].description}
+                </p>
 
                 <h3 className="text-lg font-semibold mb-3">Responsibilities</h3>
                 <ul className="list-disc pl-5 mb-6 space-y-2 text-neutral-700">
-                  {job.responsibilities.map((item, index) => (
+                  {jobs[id - 1].responsibilities.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
 
                 <h3 className="text-lg font-semibold mb-3">Requirements</h3>
                 <ul className="list-disc pl-5 mb-6 space-y-2 text-neutral-700">
-                  {job.requirements.map((item, index) => (
+                  {jobs[id - 1].requirements.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
 
                 <h3 className="text-lg font-semibold mb-3">Benefits</h3>
                 <ul className="list-disc pl-5 space-y-2 text-neutral-700">
-                  {job.benefits.map((item, index) => (
+                  {jobs[id - 1].benefits.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
@@ -185,15 +149,23 @@ const JobDetails: React.FC = () => {
 
               {/* Apply Section */}
               <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-md p-8 text-white">
-                <button className="text-2xl font-bold mb-3"
+                <button
+                  className="text-2xl font-bold mb-3"
                   onClick={handleClick}
-                >Ready to Apply?</button>
+                >
+                  Ready to Apply?
+                </button>
                 <p className="mb-6 text-white/90">
-                  Submit your application now and take the next step in your career journey.
+                  Submit your application now and take the next step in your
+                  career journey.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="btn bg-white text-primary-600 hover:bg-neutral-100"
-                    onClick={handleClick}>Apply Now</button>
+                  <button
+                    className="btn bg-white text-primary-600 hover:bg-neutral-100"
+                    onClick={handleClick}
+                  >
+                    Apply Now
+                  </button>
                   <button className="btn bg-primary-400 bg-opacity-30 hover:bg-opacity-40">
                     Save for Later
                   </button>
@@ -214,37 +186,44 @@ const JobDetails: React.FC = () => {
                 <h2 className="text-xl font-bold mb-4">Company Information</h2>
                 <div className="mb-4">
                   <img
-                    src={job.logo}
-                    alt={`${job.company} logo`}
+                    src={jobs[id - 1].logo}
+                    alt={`${jobs[id - 1].company} logo`}
                     className="w-16 h-16 object-cover rounded-lg"
                   />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{job.companyInfo.name}</h3>
-                <p className="text-neutral-600 mb-4">{job.companyInfo.description}</p>
+                <h3 className="text-lg font-semibold mb-2">
+                  {jobs[id - 1].companyInfo.name}
+                </h3>
+                <p className="text-neutral-600 mb-4">
+                  {jobs[id - 1].companyInfo.description}
+                </p>
 
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Building size={16} className="text-neutral-500 mr-2" />
                     <p className="text-neutral-700">
-                      <span className="font-medium">Industry:</span> {job.companyInfo.industry}
+                      <span className="font-medium">Industry:</span>{" "}
+                      {jobs[id - 1].companyInfo.industry}
                     </p>
                   </div>
                   <div className="flex items-center">
                     <Users size={16} className="text-neutral-500 mr-2" />
                     <p className="text-neutral-700">
-                      <span className="font-medium">Company Size:</span> {job.companyInfo.employees}
+                      <span className="font-medium">Company Size:</span>{" "}
+                      {jobs[id - 1].companyInfo.employees}
                     </p>
                   </div>
                   <div className="flex items-center">
                     <Calendar size={16} className="text-neutral-500 mr-2" />
                     <p className="text-neutral-700">
-                      <span className="font-medium">Founded:</span> {job.companyInfo.founded}
+                      <span className="font-medium">Founded:</span>{" "}
+                      {jobs[id - 1].companyInfo.founded}
                     </p>
                   </div>
                 </div>
 
                 <a
-                  href={job.companyInfo.website}
+                  href={jobs[id - 1].companyInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-block text-primary-500 hover:underline"
@@ -258,18 +237,34 @@ const JobDetails: React.FC = () => {
                 <h2 className="text-xl font-bold mb-4">Similar Jobs</h2>
                 <div className="space-y-4">
                   {[...Array(3)].map((_, index) => (
-                    <Link key={index} to={`/jobs/${index + 2}`} className="block">
+                    <Link
+                      key={index}
+                      to={`/jobs/${index + 2}`}
+                      className="block"
+                    >
                       <div className="p-4 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors">
                         <h3 className="font-semibold mb-1 text-primary-600">
-                          {index === 0 ? 'Frontend Developer' : index === 1 ? 'React Developer' : 'UI Engineer'}
+                          {index === 0
+                            ? "Frontend Developer"
+                            : index === 1
+                              ? "React Developer"
+                              : "UI Engineer"}
                         </h3>
                         <p className="text-neutral-600 text-sm mb-2">
-                          {index === 0 ? 'InnovateX' : index === 1 ? 'WebSolutions' : 'DigitalCraft'}
+                          {index === 0
+                            ? "InnovateX"
+                            : index === 1
+                              ? "WebSolutions"
+                              : "DigitalCraft"}
                         </p>
                         <div className="flex items-center text-neutral-500 text-sm">
                           <MapPin size={14} className="mr-1" />
                           <span>
-                            {index === 0 ? 'Remote' : index === 1 ? 'New York, NY' : 'Seattle, WA'}
+                            {index === 0
+                              ? "Remote"
+                              : index === 1
+                                ? "New York, NY"
+                                : "Seattle, WA"}
                           </span>
                         </div>
                       </div>
@@ -282,8 +277,6 @@ const JobDetails: React.FC = () => {
         </div>
       </div>
     </div>
-
-
   );
 };
 
