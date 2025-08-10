@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Search, MapPin, Briefcase, Filter, ChevronDown, X, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -150,19 +150,19 @@ const Jobs: React.FC = () => {
   });
 
   const toggleJobType = (type: string) => {
-    // if (selectedType.includes(type)) {
-    //   setSelectedType(selectedType.filter(t => t !== type));
-    // } else {
-    //   setSelectedType([...selectedType, type]);
-    // }
+    if (selectedType.includes(type)) {
+      setSelectedType(selectedType.filter(t => t !== type));
+    } else {
+      setSelectedType([...selectedType, type]);
+    }
   };
 
   const toggleCategory = (category: string) => {
-    // if (selectedCategories.includes(category)) {
-    //   setSelectedCategories(selectedCategories.filter(c => c !== category));
-    // } else {
-    //   setSelectedCategories([...selectedCategories, category]);
-    // }
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories(selectedCategories.filter(c => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
   };
 
   const clearFilters = () => {
@@ -403,13 +403,17 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({ job, index }) => {
+  const navigate = useNavigate();
+  const handleClick = (id: string) => {
+    navigate(`/jobs/${id}`)
+  }
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
     >
-      <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6">
+      <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6" onClick={() => handleClick(job.id)}>
         <div className="flex flex-col md:flex-row md:items-center">
           <div className="flex items-start mb-4 md:mb-0">
             <img
