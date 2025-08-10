@@ -134,7 +134,8 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
       <Link to={`/jobs/${job.id}`} className="block">
         {/* <Link to={`/jobs`} className="block"> */}
 
-        <div className="card group h-full flex flex-col" onClick={handleClick(job.id)}>
+        <div className="card group h-full flex flex-col" onClick={() => handleClick(job.id)}
+        >
           {job.featured && (
             <div className="inline-block absolute top-4 right-4 bg-accent-500 text-white text-xs font-medium px-2 py-1 rounded">
               Featured
